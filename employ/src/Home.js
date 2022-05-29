@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import Abouts from "./Components/images/about.png";
 import Contacts from "./Components/images/contact.png";
 import Local from "./Components/images/local.png";
-import Mode from "./Components/Mode.tsx"
-
+import Mode from "./Components/Mode.tsx";
+import {getJobs} from "./database/db_connection";
 
 function Home() {
   return ( 
@@ -48,29 +48,28 @@ function Home() {
   }
 export default Home;
 
-  const infodata = [
+  // const jobs = {
+  //       title: "Shop Assistant",
+  //       link: "Shopper\n"
+  //     },
+  //     {
+  //       title: "Salesman",
+  //       link: "Salesman\n"
+  //     },
+  //     {
+  //       title: "Builder",
+  //       link: "Builder\n"
+  //     },
+  //     {
+  //       title: "Assistant",
+  //       link: "Assistant\n"
+  //     },
+  //     {
+  //       title: "Busdriver",
+  //       link: "Busdriver\n"
+  //     }]
 
-    {
-    title: "Shop Assistant",
-    link: "Shopper\n"
-    },
-    {
-    title: "Salesman",
-    link: "Salesman\n"
-    },
-    {
-    title: "Builder",
-    link: "Builder\n"
-    },
-    {
-    title: "Assistant",
-    link: "Assistant\n"
-    },
-    {
-    title: "Busdriver",
-    link: "Busdriver\n"
-    } 
-]
+  const infodata = getJobs();
 
 function ScreenSize() {
   const [windowDimenion, detectHW] = useState({
