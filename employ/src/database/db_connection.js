@@ -6,6 +6,8 @@ var con = mysql.createConnection({
    password: ''
 });
 
+// ! TENTO SUBOR MUSI BYT SERVER SIDE !
+
 con.connect(function(err) {
    if (err) throw err;
    console.log("Connected!");
